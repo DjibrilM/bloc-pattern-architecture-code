@@ -5,13 +5,13 @@ class CreatePostUsecase {
 
   CreatePostUsecase({required this.repository});
   Future call(CreatePostParam params) {
-    return repository.createPost(name: params.name, body: params.body);
+    return repository.createPost(title: params.title, body: params.body);
   }
 }
 
 class CreatePostParam {
-  final String name;
+  final String title;
   final String body;
 
-  CreatePostParam({required this.name, required this.body});
+  CreatePostParam({required this.title, required this.body});
 }

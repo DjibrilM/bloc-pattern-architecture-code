@@ -7,7 +7,7 @@ class GetPostUsecase {
   final PostRepository repository;
 
   GetPostUsecase({required this.repository});
-  Future<Either<PostEntity, Failure>> call() {
-    return repository.getPosts();
+  Future<Either<Failure, List<PostEntity>>> call() async {
+    return await repository.getPosts();
   }
 }
