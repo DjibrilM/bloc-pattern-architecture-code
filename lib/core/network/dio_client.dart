@@ -11,10 +11,11 @@ final options = CacheOptions(
 class DioClient {
   static Dio instance() {
     final dio = Dio(BaseOptions(
-      baseUrl: "https://jsonplaceholder.typicode.com/",
+      baseUrl: "https://jsonplaceholder.typicode.com",
     ));
 
-    dio.interceptors.add(DioCacheInterceptor(options: options));
+    //Optional cashing
+    // dio.interceptors.add(DioCacheInterceptor(options: options));
     return dio;
   }
 }

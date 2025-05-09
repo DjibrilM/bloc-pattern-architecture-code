@@ -1,9 +1,8 @@
-import 'dart:ffi';
 
 class PostEntity {
   final String title;
   final String body;
-  final Int id;
+  final int id;
 
   PostEntity({required this.title, required this.body, required this.id});
 }
