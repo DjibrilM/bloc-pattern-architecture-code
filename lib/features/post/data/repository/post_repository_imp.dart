@@ -15,11 +15,7 @@ class PostRepositoryImplementation implements PostRepository {
   Future<Either<Failure, List<PostEntity>>> getPosts() async {
     try {
       final posts = await postRemoteDatasource.getPosts();
-
-      if (posts == null) {
-        return Left(Failure(message: "Unexpected error occurred"));
-      }
-
+      
       final data = posts.map((post) => PostModel.fromMap(post)).toList();
 
       return Right(data);
