@@ -1,7 +1,6 @@
-import 'package:bloc_patter_course/core/injection/service_locator.dart';
-import 'package:bloc_patter_course/features/post/presentation/cubit/posts_cubit.dart';
-import 'package:bloc_patter_course/features/post/presentation/screens/create_post.dart';
-import 'package:bloc_patter_course/features/post/presentation/screens/posts.dart';
+import 'package:bloc_patter_course/core/injections/service_locator.dart';
+import 'package:bloc_patter_course/features/posts/presentation/cubit/posts_cubit.dart';
+import 'package:bloc_patter_course/features/posts/presentation/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,15 +25,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'BloC pattern architecture',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const Posts(),
-      routes: {
-        CreatePost.routeName: (context) => CreatePost(),
-      },
     );
   }
 }

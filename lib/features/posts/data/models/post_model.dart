@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:bloc_patter_course/features/post/domain/entities/post_entity.dart';
+import 'package:bloc_patter_course/features/posts/domain/entities/post_entity.dart';
 
 class PostModel extends PostEntity {
   PostModel({required super.title, required super.body, required super.id});

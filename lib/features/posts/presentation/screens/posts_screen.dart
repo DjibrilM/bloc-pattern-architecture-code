@@ -1,7 +1,6 @@
-import 'package:bloc_patter_course/features/post/presentation/cubit/posts_cubit.dart';
-import 'package:bloc_patter_course/features/post/presentation/cubit/posts_state.dart';
-import 'package:bloc_patter_course/features/post/presentation/screens/create_post.dart';
-import 'package:bloc_patter_course/features/post/presentation/widgets/post.dart';
+import 'package:bloc_patter_course/features/posts/presentation/cubit/posts_cubit.dart';
+import 'package:bloc_patter_course/features/posts/presentation/cubit/posts_state.dart';
+import 'package:bloc_patter_course/features/posts/presentation/widgets/post.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,14 +25,6 @@ class _PostsState extends State<Posts> {
       builder: (context, state) {
         return Scaffold(
             appBar: AppBar(
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.add),
-                  onPressed: () {
-                    Navigator.pushNamed(context, CreatePost.routeName);
-                  },
-                )
-              ],
               title: Text('Posts'),
             ),
             body: Builder(builder: (_) {
